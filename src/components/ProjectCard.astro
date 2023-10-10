@@ -12,8 +12,8 @@ const { imgName, tecnologies, title, description, link, github } = Astro.props;
 ---
 
 <div class="flex flex-col card-hover max-w-2xl border-[1px] border-[#ABB2BF] bg-black bg-opacity-10 backdrop-filter backdrop-blur-sm lg:max-w-xs">
-    <img src={`../../public/${imgName}.webp`} alt={title} class="w-fit">
-    <img src={`../../public/${imgName}2.webp`} alt={''} class="w-fit absolute card">
+    <img src={`../assets/${imgName}.webp`} alt={title} class="w-fit">
+    <img src={`../assets/${imgName}2.webp`} alt={''} class="w-fit absolute card">
     <span class="p-2 border-t-[1px] border-b-[1px] border-[#ABB2BF]"> {tecnologies} </span>
     <div class="flex flex-col gap-4 p-4">
         <h4 class="text-2xl font-medium text-white"> {title} </h4>
