@@ -1,7 +1,68 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import PageTitle from "../components/PageTitle.astro";
 ---
 
-<Layout title="JarDev projects">
-
+<Layout title="Projects">
+    <PageTitle page="projects" description="List of all my projects" />
+    <SectionContainer title="web-development" viewAll={false} href="">
+        <ProjectCard
+			slot='projects'
+			imgName="skillsflix"
+			tecnologies='HTML React Styled-Components Material-UI'
+			title='SkillsFlix'
+			description='SPA video platform. Oracle Next Education Challenge'
+			link='https://thejardev.github.io/alura-geek/'
+			github='https://github.com/theJarDev/skillsflix'
+		/>
+		<ProjectCard
+			slot='projects'
+			imgName="alurageek"
+			tecnologies='HTML CSS JavaScript'
+			title='AluraGeek'
+			description='E-commerce. Oracle Next Education Challenge'
+			link='https://thejardev.github.io/alura-geek/'
+			github='https://github.com/theJarDev/alura-geek'
+		/>
+		<ProjectCard
+			slot='projects'
+			imgName="org"
+			tecnologies='HTML CSS React'
+			title='Org'
+			description='App for team organization. Oracle Next Education Challenge'
+			link='https://thejardev.github.io/alura-geek/'
+			github='https://github.com/theJarDev/alura-geek'
+		/>
+    </SectionContainer>
+    <SectionContainer title="others" viewAll={false} href="">
+        <ProjectCard
+			slot='projects'
+			imgName="skillsflix"
+			tecnologies='HTML React Styled-Components Material-UI'
+			title='SkillsFlix'
+			description='SPA video platform. Oracle Next Education Challenge'
+			link='https://thejardev.github.io/alura-geek/'
+			github='https://github.com/theJarDev/skillsflix'
+		/>
+		<ProjectCard
+			slot='projects'
+			imgName="alurageek"
+			tecnologies='HTML CSS JavaScript'
+			title='AluraGeek'
+			description='E-commerce. Oracle Next Education Challenge'
+			link='https://thejardev.github.io/alura-geek/'
+			github='https://github.com/theJarDev/alura-geek'
+		/>
+		<ProjectCard
+			slot='projects'
+			imgName="org"
+			tecnologies='HTML CSS React'
+			title='Org'
+			description='App for team organization. Oracle Next Education Challenge'
+			link='https://thejardev.github.io/alura-geek/'
+			github='https://github.com/theJarDev/alura-geek'
+		/>
+    </SectionContainer>
 </Layout>
