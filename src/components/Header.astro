@@ -8,9 +8,10 @@
         </a>
         <nav class="flex items-center gap-8">
             <ul class="hidden lg:flex items-center lg:gap-8">
-                <li><a class="hover:text-[#ABB2BF] 2xl:text-xl" href="/projects">projects</a></li>
-                <li><a class="hover:text-[#ABB2BF] 2xl:text-xl" href="/education">education</a></li>
-                <li><a class="hover:text-[#ABB2BF] 2xl:text-xl" href="/about-me">about me</a></li>
+                <li><a class="item" href="/"><span class="character text-[#C778DD] text-base 2xl:text-xl">#</span><span class="text text-base 2xl:text-xl">home</span></a></li>
+                <li><a class="item" href="/projects"><span class="character text-[#C778DD] text-base 2xl:text-xl">#</span><span class="text text-base 2xl:text-xl">projects</span></a></li>
+                <li><a class="item" href="/education"><span class="character text-[#C778DD] text-base 2xl:text-xl">#</span><span class="text text-base 2xl:text-xl">education</span></a></li>
+                <li><a class="item" href="/about-me"><span class="character text-[#C778DD] text-base 2xl:text-xl">#</span><span class="text text-base 2xl:text-xl">about-me</span></a></li>
             </ul>
             <select class="bg-transparent cursor-pointer 2xl:text-lg">
                 <option class="bg-[#282C33]" value="en">EN</option>
@@ -19,3 +20,12 @@
         </nav>
     </div>
 </header>
+
+<style>
+    .item:hover .text{
+        color: #ABB2BF;
+    }
+    .item:hover .character{
+        color: #c778dd85;
+    }
+</style>

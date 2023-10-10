@@ -3,6 +3,13 @@ import Layout from "../layouts/Layout.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import PageTitle from "../components/PageTitle.astro";
+//images
+import skillsflix from '../assets/Skillsflix.webp';
+import skillsflix2 from '../assets/skillsflix2.webp';
+import alurageek from '../assets/AluraGeek.webp';
+import alurageek2 from '../assets/alurageek2.webp';
+import org from '../assets/org.webp';
+import org2 from '../assets/org2.webp';
 ---
 
 <Layout title="Projects">
@@ -10,7 +17,8 @@ import PageTitle from "../components/PageTitle.astro";
     <SectionContainer title="web-development" viewAll={false} href="">
         <ProjectCard
 			slot='projects'
-			imgName="skillsflix"
+			img1={skillsflix}
+			img2={skillsflix2}
 			tecnologies='HTML React Styled-Components Material-UI'
 			title='SkillsFlix'
 			description='SPA video platform. Oracle Next Education Challenge'
@@ -19,7 +27,8 @@ import PageTitle from "../components/PageTitle.astro";
 		/>
 		<ProjectCard
 			slot='projects'
-			imgName="alurageek"
+			img1={alurageek}
+			img2={alurageek2}
 			tecnologies='HTML CSS JavaScript'
 			title='AluraGeek'
 			description='E-commerce. Oracle Next Education Challenge'
@@ -28,7 +37,8 @@ import PageTitle from "../components/PageTitle.astro";
 		/>
 		<ProjectCard
 			slot='projects'
-			imgName="org"
+			img1={org}
+			img2={org2}
 			tecnologies='HTML CSS React'
 			title='Org'
 			description='App for team organization. Oracle Next Education Challenge'
@@ -39,7 +49,8 @@ import PageTitle from "../components/PageTitle.astro";
     <SectionContainer title="others" viewAll={false} href="">
         <ProjectCard
 			slot='projects'
-			imgName="skillsflix"
+			img1={skillsflix}
+			img2={skillsflix2}
 			tecnologies='HTML React Styled-Components Material-UI'
 			title='SkillsFlix'
 			description='SPA video platform. Oracle Next Education Challenge'
@@ -48,7 +59,8 @@ import PageTitle from "../components/PageTitle.astro";
 		/>
 		<ProjectCard
 			slot='projects'
-			imgName="alurageek"
+			img1={alurageek}
+			img2={alurageek2}
 			tecnologies='HTML CSS JavaScript'
 			title='AluraGeek'
 			description='E-commerce. Oracle Next Education Challenge'
@@ -57,7 +69,8 @@ import PageTitle from "../components/PageTitle.astro";
 		/>
 		<ProjectCard
 			slot='projects'
-			imgName="org"
+			img1={org}
+			img2={org2}
 			tecnologies='HTML CSS React'
 			title='Org'
 			description='App for team organization. Oracle Next Education Challenge'
