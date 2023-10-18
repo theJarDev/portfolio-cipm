@@ -11,7 +11,7 @@ const {title, viewAll, href} = Astro.props;
 
 ---
 
-<section class="flex flex-col mt-12 pl-8 pr-8 md:mt-24 lg:pl-32 lg:pr-32 xl:mt-28 xl:pl-36 xl:pr-36 2xl:mt-32 2xl:pl-56 2xl:pr-56">
+<section class="flex flex-col mt-12 pl-8 pr-8 md:mt-24 lg:pl-32 lg:pr-32 xl:mt-28 xl:pl-36 xl:pr-36 2xl:mt-28 2xl:pl-56 2xl:pr-56">
     <div class="flex items-center justify-between mb-8 md:mb-12 xl:mb-16">
         <div class="flex items-center ">
             <span class="font-medium text-xl text-[#C778DD] md:text-3xl">#</span>
@@ -22,10 +22,10 @@ const {title, viewAll, href} = Astro.props;
             view all->
         </a>}
     </div>
-    <div class="flex flex-wrap gap-4 justify-center 2xl:gap-8">
-        <slot name="projects"/>
+    <div class="flex flex-wrap gap-4 justify-center lg:gap-8">
+        <slot />
     </div>
     <div class="flex flex-wrap gap-4 justify-center">
-        <slot />
+        <slot name="skills"/>
     </div>
 </section>

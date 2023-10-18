@@ -7,11 +7,12 @@ interface Props {
     description:string,
     link:string,
     github:string,
+    linkText?:string,
 }
-const { img1, img2, tecnologies, title, description, link, github } = Astro.props;
+const { img1, img2, tecnologies, title, description, link, github, linkText = 'Live' } = Astro.props;
 ---
 
-<div class="flex flex-col card-hover max-w-2xl border-[1px] border-[#ABB2BF] bg-black bg-opacity-10 backdrop-filter backdrop-blur-sm lg:max-w-xs">
+<div class="flex flex-col card-hover max-w-2xl border-[1px] border-[#ABB2BF] bg-black bg-opacity-20 backdrop-filter backdrop-blur-sm lg:max-w-xs">
     <img src={img1.src} alt={title} class="w-fit">
     <img src={img2.src} alt={''} class="w-fit absolute card">
     <span class="p-2 border-t-[1px] border-b-[1px] border-[#ABB2BF]"> {tecnologies} </span>
@@ -19,7 +20,7 @@ const { img1, img2, tecnologies, title, description, link, github } = Astro.prop
         <h4 class="text-2xl font-medium text-white"> {title} </h4>
         <p class="text-base "> {description} </p>
         <div class="flex gap-4">
-            <a href={link} target="_blank" class="border-[1px] border-[#C778DD] pt-2 pb-2 pl-4 pr-4 hover:bg-[#c778dd33] live">Live <~></a>
+            {link.length > 0 && <a href={link} target="_blank" class="border-[1px] border-[#C778DD] pt-2 pb-2 pl-4 pr-4 hover:bg-[#c778dd33] live">{linkText + ' <~>'} </a>}
             <a href={github} target="_blank" class="border-[1px] border-[#ABB2BF] pt-2 pb-2 pl-4 pr-4 hover:bg-[#abb2bf33] github">GitHub <~></a>
         </div>
     </div>
