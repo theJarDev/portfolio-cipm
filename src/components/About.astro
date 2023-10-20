@@ -1,12 +1,10 @@
 ---
 import chris from "../assets/chris1.webp";
-let showBtn = true;
-let linesToShow = 10;
-const path = Astro.url.pathname;
-if(path === '/about-me') {
-    showBtn = false;
-    linesToShow = 50;
+interface Props {
+    showBtn:boolean,
+    linesToShow:number
 }
+const { showBtn, linesToShow } = Astro.props;
 ---
 
 <div class="flex flex-col items-center flex-wrap gap-8 w-full lg:flex-row lg:justify-between">
