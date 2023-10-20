@@ -6,7 +6,7 @@ import SectionContainer from '../components/SectionContainer.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import SkillCard from '../components/SkillCard.astro';
 import EducationCard from '../components/EducationCard.astro';
-import AboutMe from '../components/AboutMe.astro';
+import About from '../components/About.astro';
 import Contact from '../components/Contact.astro';
 
 //images
@@ -25,8 +25,6 @@ import react from '../assets/react.svg';
 import astrx from '../assets/astro.svg';
 import tailwind from '../assets/tailwind.svg';
 import git from '../assets/git.svg';
-import figma from '../assets/figma.svg';
-import trello from '../assets/trello.svg';
 import fcfm from '../assets/fcfm4.webp';
 import one from '../assets/one2.webp';
 
@@ -41,7 +39,7 @@ import one from '../assets/one2.webp';
 			tecnologies='React Styled-Components Material-UI HTML'
 			title='SkillsFlix'
 			description='Video platform with crud methods from fake api. Oracle Next Education Challenge'
-			link='https://thejardev.github.io/alura-geek/'
+			link='https://skillsflix.vercel.app/'
 			github='https://github.com/theJarDev/skillsflix'
 		/>
 		<ProjectCard
@@ -59,8 +57,8 @@ import one from '../assets/one2.webp';
 			tecnologies='React HTML CSS'
 			title='Org'
 			description='App for team organization. Oracle Next Education Challenge'
-			link='https://thejardev.github.io/alura-geek/'
-			github='https://github.com/theJarDev/alura-geek'
+			link='https://org-project.vercel.app'
+			github='https://github.com/theJarDev/org'
 		/>
 		<ProjectCard
 			img1={todoapp}
@@ -73,22 +71,20 @@ import one from '../assets/one2.webp';
 		/>
 	</SectionContainer>
 	<SectionContainer title='skills' viewAll={false} href='/' >
-		<SkillCard slot='skills' img={html} tecnology='HTML' mainColor='#d73913' secondaryColor='#d7391333' />
-		<SkillCard slot='skills' img={css} tecnology='CSS' mainColor='#264de4' secondaryColor='#264de433' />
-		<SkillCard slot='skills' img={javascript} tecnology='JavaScript' mainColor='#f7e01d' secondaryColor='#f7e01d33' />
-		<SkillCard slot='skills' img={react} tecnology='React' mainColor='#61dafb' secondaryColor='#61dafb33' />
-		<SkillCard slot='skills' img={astrx} tecnology='Astro' mainColor='#ff5d01' secondaryColor='#ff5d0133' />
-		<SkillCard slot='skills' img={tailwind} tecnology='Tailwind CSS' mainColor='#12ccb7' secondaryColor='#12ccb733' />
-		<SkillCard slot='skills' img={git} tecnology='GIT' mainColor='#df4c37' secondaryColor='#df4c3733' />
-		<SkillCard slot='skills' img={figma} tecnology='Figma' mainColor='#a259ff' secondaryColor='#a259ff33' />
-		<SkillCard slot='skills' img={trello} tecnology='Trello' mainColor='#0179c0' secondaryColor='#0179c033' />
+		<SkillCard img={html} tecnology='HTML' mainColor='#d73913' secondaryColor='#d7391333' />
+		<SkillCard img={css} tecnology='CSS' mainColor='#264de4' secondaryColor='#264de433' />
+		<SkillCard img={javascript} tecnology='JavaScript' mainColor='#f7e01d' secondaryColor='#f7e01d33' />
+		<SkillCard img={react} tecnology='React' mainColor='#61dafb' secondaryColor='#61dafb33' />
+		<SkillCard img={astrx} tecnology='Astro' mainColor='#ff5d01' secondaryColor='#ff5d0133' />
+		<SkillCard img={tailwind} tecnology='Tailwind CSS' mainColor='#12ccb7' secondaryColor='#12ccb733' />
+		<SkillCard img={git} tecnology='GIT' mainColor='#df4c37' secondaryColor='#df4c3733' />
 	</SectionContainer>
-	<SectionContainer title='education' viewAll={true} href='/education' >
+	<SectionContainer title='education' viewAll={false} href='' >
 		<EducationCard img={fcfm} year='2020' school='UANL' career='Degree in Multimedia and Digital Animation' />
 		<EducationCard img={one} year='2023' school='Oracle/Alura Latam' career='Oracle Next Education' />
 	</SectionContainer>
 	<SectionContainer title='about-me' viewAll={false} href='/' >
-		<AboutMe />
+		<About />
 	</SectionContainer>
 	<SectionContainer title='contact' viewAll={false} href='/' >
 		<Contact />
