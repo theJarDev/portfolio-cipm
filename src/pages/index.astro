@@ -27,11 +27,17 @@ import tailwind from '../assets/tailwind.svg';
 import git from '../assets/git.svg';
 import fcfm from '../assets/fcfm4.webp';
 import one from '../assets/one2.webp';
+import efImage from "../assets/ef-image.webp";
+
+//pdf
+import englishCV from "../assets/CV-Christopher-English.pdf";
+import onePdf from "../assets/one.pdf";
+import efSetPdf from "../assets/EF-SET-Certificate.pdf";
 
 ---
 
 <Layout title="JarDev">
-	<Hero />
+	<Hero src={englishCV} language='English' />
 	<SectionContainer title='projects' viewAll={true} href='/projects' >
 		<ProjectCard
 			img1={skillsflix}
@@ -80,8 +86,9 @@ import one from '../assets/one2.webp';
 		<SkillCard img={git} tecnology='GIT' mainColor='#df4c37' secondaryColor='#df4c3733' />
 	</SectionContainer>
 	<SectionContainer title='education' viewAll={false} href='' >
-		<EducationCard img={fcfm} year='2020' school='UANL' career='Degree in Multimedia and Digital Animation' />
-		<EducationCard img={one} year='2023' school='Oracle/Alura Latam' career='Oracle Next Education' />
+		<EducationCard img={fcfm} year='2020' school='UANL' career='Degree in Multimedia and Digital Animation' button={false}/>
+		<EducationCard img={one} year='2023' school='Oracle/Alura Latam' career='Oracle Next Education F2 T5 Front-End' button src={onePdf} download='ONE-Certificate'/>
+		<EducationCard img={efImage} year='2023' school='EF SET' career='EF SET English Certificate 56/100 (B2 Upper Intermediate)' button src={efSetPdf} download='EF-SET-Certificate'/>
 	</SectionContainer>
 	<SectionContainer title='about-me' viewAll={false} href='/' >
 		<About showBtn linesToShow={10}/>
