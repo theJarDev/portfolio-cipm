@@ -4,79 +4,108 @@ import i18next, { t, changeLanguage } from "i18next";
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import MemeCard from "../components/MemeCard.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import SkillCard from "../components/SkillCard.astro";
 import EducationCard from "../components/EducationCard.astro";
 import About from "../components/About.astro";
 import Contact from "../components/Contact.astro";
 //images
-import skillsflix from "../assets/Skillsflix.webp";
-import skillsflix2 from "../assets/skillsflix2.webp";
-import alurageek from "../assets/AluraGeek.webp";
-import alurageek2 from "../assets/alurageek2.webp";
-import org from "../assets/org.webp";
-import org2 from "../assets/org2.webp";
-import todoapp from "../assets/todoapp.webp";
-import todoapp2 from "../assets/todoapp2.webp";
-import html from "../assets/html5.svg";
-import css from "../assets/css3.svg";
-import javascript from "../assets/javascript.svg";
-import react from "../assets/react.svg";
-import astrx from "../assets/astro.svg";
-import tailwind from "../assets/tailwind.svg";
-import git from "../assets/git.svg";
 import fcfm from "../assets/fcfm4.webp";
-import one from "../assets/one2.webp";
-import efImage from "../assets/ef-image.webp";
 //pdf
 import englishCV from "../assets/CV-Christopher-English.pdf";
-import onePdf from "../assets/one.pdf";
-import efSetPdf from "../assets/EF-SET-Certificate.pdf";
+//memes
+import meme1 from "../assets/meme1.png"
+import meme2 from "../assets/meme2.png"
+import meme3 from "../assets/meme3.png"
+import meme4 from "../assets/meme4.png"
+import meme5 from "../assets/meme5.png"
+import meme6 from "../assets/meme6.png"
+import meme7 from "../assets/meme7.png"
+import meme8 from "../assets/meme8.png"
+import video1 from "../assets/video1.mp4"
+import video2 from "../assets/video2.mp4"
 
 changeLanguage("en");
 ---
 
 <Layout lang={i18next.language} title={t("Layout.titles.index")} description={t("Layout.descriptions.index")}>
 	<Hero src={englishCV} language='English' />
-	<SectionContainer title={t("Sections.index.projects")} viewAll={true} href='/projects' >
-		<ProjectCard
-			img1={skillsflix}
-			img2={skillsflix2}
+	<SectionContainer title={"Memes"} viewAll={false} href='/projects' >
+		<MemeCard
+			img1={meme4}
 			tecnologies='React Styled-Components Material-UI HTML'
 			title={t("Projects.skillsflix.title")}
 			description={t("Projects.skillsflix.description")}
 			link='https://skillsflix.vercel.app/'
 			github='https://github.com/theJarDev/skillsflix'
 		/>
-		<ProjectCard
-			img1={alurageek}
-			img2={alurageek2}
+		<MemeCard
+			img1={meme5}
 			tecnologies='JavaScript HTML CSS'
 			title={t("Projects.alurageek.title")}
 			description={t("Projects.alurageek.description")}
 			link='https://thejardev.github.io/alura-geek/'
 			github='https://github.com/theJarDev/alura-geek'
 		/>
-		<ProjectCard
-			img1={org}
-			img2={org2}
+		<MemeCard
+			img1={meme3}
 			tecnologies='React HTML CSS'
 			title={t("Projects.org.title")}
 			description={t("Projects.org.description")}
 			link='https://org-project.vercel.app'
 			github='https://github.com/theJarDev/org'
 		/>
-		<ProjectCard
-			img1={todoapp}
-			img2={todoapp2}
+		<MemeCard
+			img1={meme1}
 			tecnologies='JavaScript HTML CSS'
 			title={t("Projects.todo.title")}
 			description={t("Projects.todo.description")}
 			link='https://todoapp-jardev.vercel.app'
 			github='https://github.com/theJarDev/todoapp'
 		/>
+		<MemeCard
+			img1={meme2}
+			tecnologies='JavaScript HTML CSS'
+			title={t("Projects.todo.title")}
+			description={t("Projects.todo.description")}
+			link='https://todoapp-jardev.vercel.app'
+			github='https://github.com/theJarDev/todoapp'
+		/>
+		<MemeCard
+			img1={meme6}
+			tecnologies='JavaScript HTML CSS'
+			title={t("Projects.todo.title")}
+			description={t("Projects.todo.description")}
+			link='https://todoapp-jardev.vercel.app'
+			github='https://github.com/theJarDev/todoapp'
+		/>
+		<MemeCard
+			img1={meme7}
+			tecnologies='JavaScript HTML CSS'
+			title={t("Projects.todo.title")}
+			description={t("Projects.todo.description")}
+			link='https://todoapp-jardev.vercel.app'
+			github='https://github.com/theJarDev/todoapp'
+		/>
+		<MemeCard
+			img1={meme8}
+			tecnologies='JavaScript HTML CSS'
+			title={t("Projects.todo.title")}
+			description={t("Projects.todo.description")}
+			link='https://todoapp-jardev.vercel.app'
+			github='https://github.com/theJarDev/todoapp'
+		/>
+		<video class="border-[1px] border-[#ABB2BF]" width="360" height="640" controls>
+			<source src={video2} type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+		<video class="border-[1px] border-[#ABB2BF]" width="360" height="640" controls>
+			<source src={video1} type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
 	</SectionContainer>
-	<SectionContainer title={t("Sections.index.skills")} viewAll={false} href='/' >
+	<!-- <SectionContainer title={t("Sections.index.skills")} viewAll={false} href='/' >
 		<SkillCard img={html} tecnology='HTML' mainColor='#d73913' secondaryColor='#d7391333' />
 		<SkillCard img={css} tecnology='CSS' mainColor='#264de4' secondaryColor='#264de433' />
 		<SkillCard img={javascript} tecnology='JavaScript' mainColor='#f7e01d' secondaryColor='#f7e01d33' />
@@ -84,16 +113,16 @@ changeLanguage("en");
 		<SkillCard img={astrx} tecnology='Astro' mainColor='#ff5d01' secondaryColor='#ff5d0133' />
 		<SkillCard img={tailwind} tecnology='Tailwind CSS' mainColor='#12ccb7' secondaryColor='#12ccb733' />
 		<SkillCard img={git} tecnology='GIT' mainColor='#df4c37' secondaryColor='#df4c3733' />
+	</SectionContainer> -->
+	<SectionContainer title={"Educación"} viewAll={false} href='' >
+		<EducationCard img={fcfm} year='2022' school='UANL' career={"Lic. en Multimedia y Animación Digital"} button={false}/>
+		<!-- <EducationCard img={one} year='2023' school='Oracle/Alura Latam' career={t("Education.one")} button src={onePdf} download='ONE-Certificate'/>
+		<EducationCard img={efImage} year='2023' school='EF SET' career={t("Education.ef")} button src={efSetPdf} download='EF-SET-Certificate'/> -->
 	</SectionContainer>
-	<SectionContainer title={t("Sections.index.education")} viewAll={false} href='' >
-		<EducationCard img={fcfm} year='2022' school='UANL' career={t("Education.fcfm")} button={false}/>
-		<EducationCard img={one} year='2023' school='Oracle/Alura Latam' career={t("Education.one")} button src={onePdf} download='ONE-Certificate'/>
-		<EducationCard img={efImage} year='2023' school='EF SET' career={t("Education.ef")} button src={efSetPdf} download='EF-SET-Certificate'/>
-	</SectionContainer>
-	<SectionContainer title={t("Sections.index.about")} viewAll={false} href='/' >
+	<!-- <SectionContainer title={t("Sections.index.about")} viewAll={false} href='/' >
 		<About showBtn linesToShow={11}/>
-	</SectionContainer>
-	<SectionContainer title={t("Sections.index.contact")} viewAll={false} href='/' >
+	</SectionContainer> -->
+	<SectionContainer title={"Contacto"} viewAll={false} href='/' >
 		<Contact />
 	</SectionContainer>
 </Layout>
